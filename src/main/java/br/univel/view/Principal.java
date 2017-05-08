@@ -221,7 +221,7 @@ public class Principal extends JFrame {
 		btnExcluir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(table.getSelectedRow() >= 0){
-					deleteClient((Integer) table.getValueAt(table.getSelectedRow(), 0));
+					deleteCliente((Integer) table.getValueAt(table.getSelectedRow(), 0));
 				}
 			}
 		});
@@ -375,7 +375,7 @@ public class Principal extends JFrame {
 		return cl;
 	}
 	
-	public void deleteClient(int id){
+	public void deleteCliente(int id){
 		session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
 		Cliente cl = session.get(Cliente.class, id);
