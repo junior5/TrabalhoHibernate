@@ -314,7 +314,7 @@ public class Principal extends JFrame {
 		}
 	}	
 	
-	private void preencherDados() {
+	public void preencherDados() {
 		
 		if(table.getSelectedRow() >= 0){
 			this.idCliente = (Integer) table.getValueAt(table.getSelectedRow(), 0);
